@@ -22,8 +22,8 @@ ActiveRecord::Schema.define(:version => 20110515054644) do
     t.integer  "cart_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "quantity",   :default => 1
-    t.decimal  "price"
+    t.integer  "quantity",                                  :default => 1
+    t.decimal  "price",      :precision => 10, :scale => 0
     t.integer  "order_id"
   end
 
@@ -40,7 +40,7 @@ ActiveRecord::Schema.define(:version => 20110515054644) do
     t.string   "title"
     t.text     "description"
     t.string   "image_url"
-    t.decimal  "price"
+    t.decimal  "price",       :precision => 10, :scale => 0
     t.datetime "created_at"
     t.datetime "updated_at"
   end
