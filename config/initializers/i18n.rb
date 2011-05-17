@@ -6,8 +6,10 @@
 # We make no guarantees that this code is fit for any purpose. 
 # Visit http://www.pragmaticprogrammer.com/titles/rails4 for more book information.
 #---
-# Be sure to restart your server when you modify this file.
+#encoding: utf-8
+I18n.default_locale = :en
 
-# Add new mime types for use in respond_to blocks:
-# Mime::Type.register "text/richtext", :rtf
-# Mime::Type.register_alias "text/html", :iphone
+LANGUAGES = [
+  ['English',                  'en'],
+  ["Espa&ntilde;ol".html_safe, 'es']
+]

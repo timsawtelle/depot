@@ -7,9 +7,14 @@
 # Visit http://www.pragmaticprogrammer.com/titles/rails4 for more book information.
 #---
 class StoreController < ApplicationController
+  skip_before_filter :authorize
   def index
-    @products = Product.all
-    @cart = current_cart
+    if params[:set_locale]
+      redirect_to store_path(:locale => params[:set_locale])
+    else
+      @products = Product.all
+      @cart = current_cart
+    end
   end
 
 end

@@ -14,7 +14,7 @@ class ProductsController < ApplicationController
 
     respond_to do |format|
       format.html # index.html.erb
-      format.xml  { render :xml => @products }
+      format.xml  # index.xml.builder
     end
   end
 
